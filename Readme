@@ -1,0 +1,23 @@
+
+Queries
+1. Give me every album in my music library that was released in a given year
+2. Give me every album in my music library that was created by a given artist
+
+Tables
+
+*******************************
+Name: music_library
+Year
+Artist Name
+Album Name
+Primary KEY (Year, Artist Name)
+*******************************
+
+
+*******************************
+Name: album_library
+Artist Name
+Year
+Album Name
+Primary KEY (Artist Name,Year)
+*******************************
