@@ -25,39 +25,39 @@ Need to have Apache Cassandra installed
 # Tables
 
 *******************************
-Name: music_library
-Year
-Artist Name
-Album Name
-Primary KEY (Year, Artist Name)
+- __Name: music_library__
+- Year
+- Artist Name
+- Album Name
+- Primary KEY (Year, Artist Name)
 *******************************
 *******************************
-Name: artist_library
-Artist Name
-Year
-Album Name
-Primary KEY (Artist Name,Year)
+- __Name: artist_library__
+- Artist Name
+- Year
+- Album Name
+- Primary KEY (Artist Name,Year)
 *******************************
 *******************************
-Name: album_library
-Album Name
-Artist Name
-Year
-Primary KEY (Artist Name,Year)
+__Name: album_library__
+- Album Name
+- Artist Name
+- Year
+- Primary KEY (Artist Name,Year)
 *******************************
 *******************************
-Name: music_library2
-Year
-Artist Name
-Album Name
-City
-Primary KEY (Year, Artist Name, Album Name)
+- __Name: music_library2__
+- Year
+- Artist Name
+- Album Name
+- City
+- Primary KEY (Year, Artist Name, Album Name)
 *******************************
 *******************************
-Name: music_library3
-Artist Name
-Album Name
-Year
-City
-Primary KEY (Artist Name, Album Name, Year)
+- __Name: music_library3__
+- Artist Name
+- Album Name
+- Year
+- City
+- Primary KEY (Artist Name, Album Name, Year)
 *******************************
