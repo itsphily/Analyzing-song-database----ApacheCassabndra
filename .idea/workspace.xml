@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2a24b3a-6324-4f4e-8f4e-4139c37a3c97" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Apache Cassandra Demo #1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Apache Cassandra Demo #1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQLqueries.py" beforeDir="false" afterPath="$PROJECT_DIR$/CQLqueries.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme" beforeDir="false" afterPath="$PROJECT_DIR$/Readme" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apache Cassandra Demo #1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="158">
+              <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
               <folding>
                 <element signature="e#2#39#0" expanded="true" />
               </folding>
@@ -30,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Readme">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+            <state relative-caret-position="272">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -39,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CQLqueries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="86" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
+            <state relative-caret-position="119">
+              <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -54,6 +56,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>music_library</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -61,14 +68,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CQL queries.py" />
+        <option value="$PROJECT_DIR$/Readme" />
         <option value="$PROJECT_DIR$/CQLqueries.py" />
         <option value="$PROJECT_DIR$/Apache Cassandra Demo #1.py" />
-        <option value="$PROJECT_DIR$/Readme" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1585" />
     <option name="width" value="1628" />
     <option name="height" value="1715" />
   </component>
@@ -173,15 +180,15 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
     <entry file="file://$PROJECT_DIR$/CQLqueries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="86" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
+        <state relative-caret-position="119">
+          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Apache Cassandra Demo #1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="158">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
           <folding>
             <element signature="e#2#39#0" expanded="true" />
           </folding>
@@ -190,8 +197,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+        <state relative-caret-position="272">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>

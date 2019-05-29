@@ -19,6 +19,8 @@ Queries
 1. Give me every album in my music library that was released in a given year
 2. Give me every album in my music library that was created by a given artist
 3. All the information in my music library given an album name
+4. Give me every album in my music library that was released in a given year (Using a composite key)
+5. Give me every album in my music library that was released by a specific artist (Using a composite key)
 
 Tables
 
@@ -54,4 +56,14 @@ Album Name
 City
 Primary KEY (Year, Artist Name, Album Name)
 *******************************
+
+*******************************
+Name: music_library3
+Artist Name
+Album Name
+Year
+City
+Primary KEY (Artist Name, Album Name, Year)
+*******************************
+
 

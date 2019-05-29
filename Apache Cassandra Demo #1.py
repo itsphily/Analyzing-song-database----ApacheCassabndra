@@ -32,6 +32,10 @@ session.execute(album_library_create)
 session.execute(music_library2_drop)
 session.execute(music_library2_create)
 
+# Resets and Creates a table music_library2
+session.execute(music_library3_drop)
+session.execute(music_library3_create)
+
 # Create store the information I want to insert in the tables in a list
 year_released = [1965, 1965, 1970, 1966, 1970]
 artists = ['The Beatles', 'The Who', 'The Beatles', 'The Monkees', 'The Carpenters']
@@ -43,7 +47,8 @@ for i in range(len(year_released)):
     session.execute(music_library_insert, (year_released[i], artists[i], albums[i]))
     session.execute(artist_library_insert, (artists[i], year_released[i], albums[i]))
     session.execute(album_library_insert, (albums[i], artists[i], year_released[i]))
-    session.execute(music_library2_insert, ( year_released[i], artists[i], albums[i], cities[i]))
+    session.execute(music_library2_insert, (year_released[i], artists[i], albums[i], cities[i]))
+    session.execute(music_library3_insert, (artists[i], albums[i], year_released[i], cities[i]))
 
 #Testing our queries
 
@@ -71,12 +76,20 @@ for row in rows:
     print(row.album_name, row.artist_name, row.year,)
 print('*' * 40, '\n')
 
-#4. All the information from the music library about a given album
+#4. All the information from the music library2 for albums created in a given year
 print('*'*40)
 print('All the information for albums created in 1965')
 rows = session.execute(album_year2, [1965])
 for row in rows:
     print(row.year, row.artist_name, row.album_name, row.city)
+print('*' * 40, '\n')
+
+#5. All the information from the music library3 for albums created by a specific artist
+print('*'*40)
+print('All the information for albums created by The Beatles')
+rows = session.execute(album_year3, ['The Beatles'])
+for row in rows:
+    print(row.artist_name, row.album_name, row.year, row.city)
 print('*' * 40)
 
 # Close the session and cluster connection
