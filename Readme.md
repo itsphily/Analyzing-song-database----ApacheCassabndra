@@ -1,21 +1,20 @@
 
-Description
-
+# Description
 Create and connect to an apache cassandra database using a python driver.
 Create tables based on specific queries, and query those tables.
 
 Make use of PRIMARY KEY to partition the data
 
-How to run
+# How to run
 Start an cassandra cluster (got to your apache cassandra directory and in your command line start apache cassandra)
 Once started find the local host address and replace it in the section: Connects to Apache Cassandra in the Apache Cassandra Demo#1.py file.
 
 
-Dependencies
+# Dependencies
 Need to have Apache Cassandra installed
 
 
-Queries
+# Queries
 1. Give me every album in my music library that was released in a given year
 2. Give me every album in my music library that was created by a given artist
 3. All the information in my music library given an album name
@@ -23,7 +22,7 @@ Queries
 5. Give me every album in my music library that was released by a specific artist (Using a composite key)
 6. Give me the city in which the Album "Let It Be" was released
 
-Tables
+# Tables
 
 *******************************
 Name: music_library
@@ -32,7 +31,6 @@ Artist Name
 Album Name
 Primary KEY (Year, Artist Name)
 *******************************
-
 *******************************
 Name: artist_library
 Artist Name
@@ -40,7 +38,6 @@ Year
 Album Name
 Primary KEY (Artist Name,Year)
 *******************************
-
 *******************************
 Name: album_library
 Album Name
@@ -48,7 +45,6 @@ Artist Name
 Year
 Primary KEY (Artist Name,Year)
 *******************************
-
 *******************************
 Name: music_library2
 Year
@@ -57,7 +53,6 @@ Album Name
 City
 Primary KEY (Year, Artist Name, Album Name)
 *******************************
-
 *******************************
 Name: music_library3
 Artist Name
@@ -66,5 +61,3 @@ Year
 City
 Primary KEY (Artist Name, Album Name, Year)
 *******************************
-
-
