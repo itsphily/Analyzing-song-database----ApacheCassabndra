@@ -46,4 +46,12 @@ Year
 Primary KEY (Artist Name,Year)
 *******************************
 
+*******************************
+Name: music_library2
+Year
+Artist Name
+Album Name
+City
+Primary KEY (Year, Artist Name, Album Name)
+*******************************
 
