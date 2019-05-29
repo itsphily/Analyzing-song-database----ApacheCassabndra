@@ -1,7 +1,21 @@
 
+Description
+Create and connect to an apache cassandra database using a python driver.
+Create tables based on specific queries, and query those tables.
+
+How to run
+Start an cassandra cluster (got to your apache cassandra directory and in your command line start apache cassandra)
+Once started find the local host address and replace it in the section: Connects to Apache Cassandra in the Apache Cassandra Demo#1.py file.
+
+
+Dependencies
+Need to have Apache Cassandra installed
+
+
 Queries
 1. Give me every album in my music library that was released in a given year
 2. Give me every album in my music library that was created by a given artist
+3. All the information in my music library given an album name
 
 Tables
 
@@ -13,11 +27,20 @@ Album Name
 Primary KEY (Year, Artist Name)
 *******************************
 
-
 *******************************
-Name: album_library
+Name: artist_library
 Artist Name
 Year
 Album Name
 Primary KEY (Artist Name,Year)
 *******************************
+
+*******************************
+Name: album_library
+Album Name
+Artist Name
+Year
+Primary KEY (Artist Name,Year)
+*******************************
+
+

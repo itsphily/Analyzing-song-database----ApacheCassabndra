@@ -4,7 +4,8 @@ from cassandra.cluster import Cluster
 from CQLqueries import *
 
 # Connects to Apache Cassandra
-cluster = Cluster(['127.0.0.1'])
+local_host_address = '127.0.0.1'
+cluster = Cluster([local_host_address])
 session = cluster.connect()
 
 # Resets and Creates a database
@@ -36,27 +37,6 @@ for i in range(len(year_released)):
     session.execute(music_library_insert, (year_released[i], artists[i], albums[i]))
     session.execute(artist_library_insert, (artists[i], year_released[i], albums[i]))
     session.execute(album_library_insert, (albums[i], artists[i], year_released[i]))
-"""    
-session.execute(music_library_insert, (1965, 'The Beatles', 'Rubber Soul'))
-session.execute(music_library_insert, (1965, 'The Who', 'My Generation'))
-session.execute(music_library_insert, (1970, 'The Beatles', 'Let It Be'))
-session.execute(music_library_insert, (1966, 'The Monkees', 'The Monkee'))
-session.execute(music_library_insert, (1970, 'The Carpenters', 'Close To You'))
-
-# Insert values into artist_library
-session.execute(artist_library_insert, ('The Beatles', 1965,  'Rubber Soul'))
-session.execute(artist_library_insert, ('The Who', 1965,  'My Generation'))
-session.execute(artist_library_insert, ( 'The Beatles', 1970, 'Let It Be'))
-session.execute(artist_library_insert, ('The Monkees', 1966, 'The Monkee'))
-session.execute(artist_library_insert, ('The Carpenters', 1970, 'Close To You'))
-
-#Insert values into album_library
-session.execute(album_library_insert, ('Rubber Soul', 'The Beatles', 1965))
-session.execute(album_library_insert, ('My Generation', 'The Who', 1965))
-session.execute(album_library_insert, ('Let It Be', 'The Beatles', 1970))
-session.execute(album_library_insert, ('The Monkee', 'The Monkees', 1966))
-session.execute(album_library_insert, ('Close To You', 'The Carpenters', 1970))
-"""
 
 #Testing our queries
 
