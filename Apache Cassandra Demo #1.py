@@ -19,6 +19,7 @@ session.set_keyspace('udacity')
 session.execute(music_library_drop)
 session.execute(music_library_create)
 
+
 # Resets and Creates a table artist_library
 session.execute(artist_library_drop)
 session.execute(artist_library_create)
@@ -27,16 +28,22 @@ session.execute(artist_library_create)
 session.execute(album_library_drop)
 session.execute(album_library_create)
 
+# Resets and Creates a table music_library2
+session.execute(music_library2_drop)
+session.execute(music_library2_create)
+
 # Create store the information I want to insert in the tables in a list
 year_released = [1965, 1965, 1970, 1966, 1970]
 artists = ['The Beatles', 'The Who', 'The Beatles', 'The Monkees', 'The Carpenters']
 albums = ['Rubber Soul', 'My Generation', 'Let It Be', 'The Monkees', 'Close To You']
+cities = ['Oxford', 'London', 'Liverpool', 'Los Angeles', 'San Diego']
 
 # Insert values into music_library
 for i in range(len(year_released)):
     session.execute(music_library_insert, (year_released[i], artists[i], albums[i]))
     session.execute(artist_library_insert, (artists[i], year_released[i], albums[i]))
     session.execute(album_library_insert, (albums[i], artists[i], year_released[i]))
+    session.execute(music_library2_insert, ( year_released[i], artists[i], albums[i], cities[i]))
 
 #Testing our queries
 
@@ -62,8 +69,15 @@ print('All the information about "Close to you"')
 rows = session.execute(album_info, ['Close To You'])
 for row in rows:
     print(row.album_name, row.artist_name, row.year,)
-print('*' * 40)
+print('*' * 40, '\n')
 
+#4. All the information from the music library about a given album
+print('*'*40)
+print('All the information for albums created in 1965')
+rows = session.execute(album_year2, [1965])
+for row in rows:
+    print(row.year, row.artist_name, row.album_name, row.city)
+print('*' * 40)
 
 # Close the session and cluster connection
 session.shutdown()

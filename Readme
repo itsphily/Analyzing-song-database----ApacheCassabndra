@@ -1,7 +1,10 @@
 
 Description
+
 Create and connect to an apache cassandra database using a python driver.
 Create tables based on specific queries, and query those tables.
+
+Make use of PRIMARY KEY to partition the data
 
 How to run
 Start an cassandra cluster (got to your apache cassandra directory and in your command line start apache cassandra)
