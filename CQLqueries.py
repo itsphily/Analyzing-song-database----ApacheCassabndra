@@ -1,7 +1,7 @@
 
 # Drop and Create the database
-drop_database = """ DROP KEYSPACE IF EXISTS udacity"""
-create_database = """ CREATE KEYSPACE IF NOT EXISTS udacity 
+drop_database = """ DROP KEYSPACE IF EXISTS PhilHabra"""
+create_database = """ CREATE KEYSPACE IF NOT EXISTS PhilHabra 
 WITH REPLICATION = {'class' : 'SimpleStrategy' , 'replication_factor' : 1 }
 """
 
@@ -33,7 +33,7 @@ VALUES(%s, %s, %s)"""
 # Drop and Create the music_library2 table
 music_library2_drop = """DROP TABLE IF EXISTS music_library2"""
 music_library2_create = """CREATE TABLE IF NOT EXISTS music_library2
-(year int, artist_name text, album_name text, city text,  PRIMARY KEY(year, artist_name, album_name))"""
+(year int, artist_name text, album_name text, city text,  PRIMARY KEY((year), artist_name, album_name))"""
 # Insert into music_library
 music_library2_insert = """ INSERT into music_library2(year, artist_name, album_name, city) 
 VALUES(%s, %s, %s, %s)"""
@@ -41,7 +41,7 @@ VALUES(%s, %s, %s, %s)"""
 # Drop and Create the music_library3 table
 music_library3_drop = """DROP TABLE IF EXISTS music_library3"""
 music_library3_create = """CREATE TABLE IF NOT EXISTS music_library3
-(artist_name text, album_name text, year int, city text,  PRIMARY KEY(artist_name, album_name, year))"""
+(artist_name text, album_name text, year int, city text,  PRIMARY KEY((artist_name), album_name, year))"""
 # Insert into music_library
 music_library3_insert = """ INSERT into music_library3(artist_name, album_name, year, city) 
 VALUES(%s, %s, %s, %s)"""
@@ -61,3 +61,6 @@ album_year2 = 'SELECT * FROM music_library2 WHERE year = %s'
 
 # All the information from music_library2 for albums created by a specific artist
 album_year3 = 'SELECT * FROM music_library3 WHERE artist_name = %s'
+
+# Give me the city in which the Album "Let It Be" was released
+city_album = "SELECT city FROM music_library3 WHERE album_name = %s AND artist_name = %s"

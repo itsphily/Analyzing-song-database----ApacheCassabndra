@@ -21,6 +21,7 @@ Queries
 3. All the information in my music library given an album name
 4. Give me every album in my music library that was released in a given year (Using a composite key)
 5. Give me every album in my music library that was released by a specific artist (Using a composite key)
+6. Give me the city in which the Album "Let It Be" was released
 
 Tables
 

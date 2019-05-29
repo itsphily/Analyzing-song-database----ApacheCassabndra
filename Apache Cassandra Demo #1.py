@@ -92,6 +92,13 @@ for row in rows:
     print(row.artist_name, row.album_name, row.year, row.city)
 print('*' * 40)
 
+#6. Give me the city in which the Album "Let It Be" was released
+print('*'*40)
+row = session.execute(city_album, ['Let It Be', 'The Beatles'])
+print('"Let It Be" was released in {}'.format(row.one()[0]))
+print('*' * 40)
+
+
 # Close the session and cluster connection
 session.shutdown()
 cluster.shutdown()
