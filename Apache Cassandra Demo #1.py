@@ -13,7 +13,7 @@ session.execute(drop_database)
 session.execute(create_database)
 
 # Connect to the keyspace(database)
-session.set_keyspace('udacity')
+session.set_keyspace('philhabra')
 
 # Resets and Creates a table music_library
 session.execute(music_library_drop)
@@ -98,6 +98,16 @@ row = session.execute(city_album, ['Let It Be', 'The Beatles'])
 print('"Let It Be" was released in {}'.format(row.one()[0]))
 print('*' * 40)
 
+
+# Drop the tables
+session.execute(music_library_drop)
+session.execute(artist_library_drop)
+session.execute(album_library_drop)
+session.execute(music_library2_drop)
+session.execute(music_library3_drop)
+
+# Drop the keyspace
+session.execute(drop_database)
 
 # Close the session and cluster connection
 session.shutdown()
